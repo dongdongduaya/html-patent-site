@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一种可视化直肠活检装置 - 中国专利公布公告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "SimSun", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background-color: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+        
+        .logo-icon {
+            width: 60px;
+            height: 40px;
+            margin-right: 15px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-stars {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .logo-p {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            font-size: 32px;
+            font-weight: bold;
+            color: #2563eb;
+            font-family: Arial, sans-serif;
+        }
+        
+        .logo-text {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .star {
+            color: #dc2626;
+            font-size: 8px;
+            position: absolute;
+        }
+        
+        .star:nth-child(1) { top: 2px; left: 2px; }
+        .star:nth-child(2) { top: 8px; left: 8px; }
+        .star:nth-child(3) { top: 14px; left: 2px; }
+        .star:nth-child(4) { top: 20px; left: 8px; }
+        .star:nth-child(5) { top: 26px; left: 2px; }
+        
+        .title {
+            font-size: 28px;
+            color: #333;
+            font-weight: normal;
+        }
+        
+        .nav-bar {
+            background-color: #2563eb;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .nav-item:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .nav-item.active {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .nav-item:last-child {
+            border-right: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .content-wrapper {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .patent-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .button-group {
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #3182ce;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: #718096;
+            color: white;
+        }
+        
+        .patent-info {
+            margin-bottom: 30px;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        
+        .info-label {
+            width: 120px;
+            color: #666;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .info-value {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .abstract-section {
+            margin-bottom: 30px;
+        }
+        
+        .abstract-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .abstract-text {
+            color: #555;
+            line-height: 1.8;
+            font-size: 14px;
+            text-align: justify;
+        }
+        
+        .drawing-section {
+            margin-bottom: 30px;
+        }
+        
+        .drawing-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .drawing-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        
+        .drawing {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .footer {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 15px;
+        }
+        
+        .footer-link {
+            color: #3182ce;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        
+        .footer-info {
+            color: #666;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        
+        .footer-logos {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="logo-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="logo-p">P</div>
+                </div>
+                <div class="logo-text">CNIPA<br>国家知识产权局</div>
+            </div>
+            <div class="title">中国专利公布公告</div>
+        </div>
+    </header>
+    
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <a href="#" class="nav-item">首页</a>
+            <a href="#" class="nav-item">事务查询</a>
+            <a href="#" class="nav-item active">专利公告查询</a>
+            <a href="#" class="nav-item">高级查询</a>
+            <a href="#" class="nav-item">IPC分类查询</a>
+            <a href="#" class="nav-item">LOC分类查询</a>
+            <a href="#" class="nav-item">数据说明</a>
+            <a href="#" class="nav-item">🗺️ 使用说明</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content-wrapper">
+            <h1 class="patent-title">一种可视化直肠活检装置</h1>
+            
+            <div class="button-group">
+                <a href="#" class="btn btn-primary">实用新型专利</a>
+                <a href="#" class="btn btn-secondary">摘要数据</a>
+            </div>
+            
+            <div class="patent-info">
+                <div class="info-row">
+                    <div class="info-label">授权公告号：</div>
+                    <div class="info-value">CN220212980U</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">授权公告日：</div>
+                    <div class="info-value">2023.12.22</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">申请号：</div>
+                    <div class="info-value">202321543367</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">申请日：</div>
+                    <div class="info-value">2023.06.16</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">专利权人：</div>
+                    <div class="info-value">哈尔滨医科大学</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">地址：</div>
+                    <div class="info-value">150000黑龙江省哈尔滨市松北区哈尔滨大学城3号楼1单元202</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">发明人：</div>
+                    <div class="info-value">姚震,蒋在群,孙忠博,王书宝,许艺钦,王云梦,郝瑞辉</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">分类号：</div>
+                    <div class="info-value">A61B10/06(2006.01)I;A61B10/04(2006.01)I;A61B18/12(2006.01)I;A61B18/14(2006.01)I;A61M31/00(2006.01)I;</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">专利代理机构：</div>
+                    <div class="info-value">哈尔滨市佳专利代理事务所(普通合伙)23209</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">专利代理师：</div>
+                    <div class="info-value">姜俊媛</div>
+                </div>
+            </div>
+            
+            <div class="abstract-section">
+                <h3 class="abstract-title">摘要：</h3>
+                <p class="abstract-text">本实用新型涉及医疗用品领域，公开了一种可视化直肠活检装置，所述装置包括套管，所述套管为塑料材质，所述套管内设置第一芯管、第二芯管，所述第一芯管内设置活检钳，所述第二芯管内设置可视化装置，所述套管套设于管道，本实用新型解决了现有技术中在连的全部下部时并直肠活检过程中无法实现下置监测的难题，所述套管内的可视化装置，本不仅提高质，本不能提高效果，本不满足的实际大及所述套管的直径，所述套管内设置第一芯管、第二芯管，所述第一芯管内设置活检钳，所述第二芯管内设置可视化装置，所述套管套设及线，本实用新型解决了现有技术中在连的全部下部时并直肠活检过程中无法实现下置监测的难题，本不仅提高质，本不能提高效果，本不满足的实际大小所述套管的问题。</p>
+            </div>
+            
+            <div class="drawing-section">
+                <h3 class="drawing-title">摘要附图</h3>
+                <div class="drawing-container">
+                    <svg width="400" height="300" viewBox="0 0 400 300" class="drawing">
+                        <!-- Technical drawing representation -->
+                        <g stroke="#333" stroke-width="1" fill="none">
+                            <!-- Main body -->
+                            <rect x="50" y="120" width="300" height="60" rx="30"/>
+                            <!-- Internal components -->
+                            <circle cx="100" cy="150" r="15"/>
+                            <circle cx="150" cy="150" r="15"/>
+                            <circle cx="200" cy="150" r="15"/>
+                            <circle cx="250" cy="150" r="15"/>
+                            <circle cx="300" cy="150" r="15"/>
+                            <!-- Extension -->
+                            <line x1="350" y1="150" x2="380" y2="150"/>
+                            <circle cx="380" cy="150" r="8"/>
+                            <!-- Labels -->
+                            <text x="100" y="200" text-anchor="middle" font-size="12" fill="#666">1</text>
+                            <text x="150" y="200" text-anchor="middle" font-size="12" fill="#666">2</text>
+                            <text x="200" y="200" text-anchor="middle" font-size="12" fill="#666">3</text>
+                            <text x="250" y="200" text-anchor="middle" font-size="12" fill="#666">4</text>
+                            <text x="300" y="200" text-anchor="middle" font-size="12" fill="#666">5</text>
+                            <text x="380" y="200" text-anchor="middle" font-size="12" fill="#666">6</text>
+                            <!-- Connection lines -->
+                            <line x1="100" y1="165" x2="100" y2="190" stroke-dasharray="2,2"/>
+                            <line x1="150" y1="165" x2="150" y2="190" stroke-dasharray="2,2"/>
+                            <line x1="200" y1="165" x2="200" y2="190" stroke-dasharray="2,2"/>
+                            <line x1="250" y1="165" x2="250" y2="190" stroke-dasharray="2,2"/>
+                            <line x1="300" y1="165" x2="300" y2="190" stroke-dasharray="2,2"/>
+                            <line x1="380" y1="158" x2="380" y2="190" stroke-dasharray="2,2"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">版权声明</a>
+            <a href="#" class="footer-link">联系我们</a>
+        </div>
+        <div class="footer-info">
+            主办单位：国家知识产权局　软件维护：知识产权出版社　网站标识码：bm38000007　ICP备案编号：京ICP备05069085号-14<br>
+            ⚠️ 京公网备 11040102700058号 版权所有：国家知识产权局（未经许可不得复制）　网站技术支持：010-62086466 / 6421 / 6415
+        </div>
+        <div class="footer-logos">
+            <div class="footer-logo">⚠️</div>
+            <div class="footer-logo">🔍 政府网站<br>找错</div>
+        </div>
+    </footer>
+</body>
+</html>
