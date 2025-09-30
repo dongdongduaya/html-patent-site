@@ -13,90 +13,46 @@
         
         body {
             font-family: "Microsoft YaHei", "SimSun", Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #e8e8e8;
             color: #333;
+            line-height: 1.5;
         }
-        
+        /* Header */
         .header {
             background-color: white;
             padding: 15px 20px;
             border-bottom: 1px solid #ddd;
         }
-        
         .header-content {
             display: flex;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-right: 30px;
-        }
-        
-        .logo-icon {
-            width: 60px;
-            height: 40px;
+        /* New CNIPA logo image */
+        .cnipa-logo {
+            height: 50px;
+            width: auto;
             margin-right: 15px;
-            position: relative;
-            display: flex;
-            align-items: center;
         }
-        
-        .logo-stars {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        
-        .logo-p {
-            position: absolute;
-            left: 20px;
-            top: 0;
-            font-size: 32px;
-            font-weight: bold;
-            color: #2563eb;
-            font-family: Arial, sans-serif;
-        }
-        
-        .logo-text {
-            font-size: 16px;
-            color: #333;
-            font-weight: 500;
-        }
-        
-        .star {
-            color: #dc2626;
-            font-size: 8px;
-            position: absolute;
-        }
-        
-        .star:nth-child(1) { top: 2px; left: 2px; }
-        .star:nth-child(2) { top: 8px; left: 8px; }
-        .star:nth-child(3) { top: 14px; left: 2px; }
-        .star:nth-child(4) { top: 20px; left: 8px; }
-        .star:nth-child(5) { top: 26px; left: 2px; }
-        
+        /* Page title next to logo */
         .title {
-            font-size: 28px;
-            color: #333;
-            font-weight: normal;
+            font-size: 32px;
+            color: #2563eb;
+            font-weight: bold;
         }
         
+        /* Navigation bar */
         .nav-bar {
             background-color: #2563eb;
             padding: 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
         .nav-content {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
         }
-        
         .nav-item {
             color: white;
             text-decoration: none;
@@ -105,32 +61,28 @@
             transition: background-color 0.3s;
             border-right: 1px solid rgba(255,255,255,0.2);
         }
-        
         .nav-item:hover {
             background-color: rgba(255,255,255,0.1);
         }
-        
         .nav-item.active {
             background-color: rgba(255,255,255,0.2);
         }
-        
         .nav-item:last-child {
             border-right: none;
         }
         
+        /* Main content container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        
         .content-wrapper {
             background: white;
             border-radius: 8px;
             padding: 30px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        
         .patent-title {
             font-size: 24px;
             color: #333;
@@ -141,7 +93,6 @@
         .button-group {
             margin-bottom: 30px;
         }
-        
         .btn {
             padding: 8px 16px;
             margin-right: 10px;
@@ -152,12 +103,10 @@
             text-decoration: none;
             display: inline-block;
         }
-        
         .btn-primary {
             background-color: #3182ce;
             color: white;
         }
-        
         .btn-secondary {
             background-color: #718096;
             color: white;
@@ -166,20 +115,17 @@
         .patent-info {
             margin-bottom: 30px;
         }
-        
         .info-row {
             display: flex;
             margin-bottom: 15px;
             align-items: flex-start;
         }
-        
         .info-label {
             width: 120px;
             color: #666;
             font-size: 14px;
             flex-shrink: 0;
         }
-        
         .info-value {
             color: #333;
             font-size: 14px;
@@ -189,14 +135,12 @@
         .abstract-section {
             margin-bottom: 30px;
         }
-        
         .abstract-title {
             font-size: 16px;
             color: #333;
             margin-bottom: 15px;
             font-weight: normal;
         }
-        
         .abstract-text {
             color: #555;
             line-height: 1.8;
@@ -207,14 +151,12 @@
         .drawing-section {
             margin-bottom: 30px;
         }
-        
         .drawing-title {
             font-size: 16px;
             color: #333;
             margin-bottom: 15px;
             font-weight: normal;
         }
-        
         .drawing-container {
             text-align: center;
             padding: 20px;
@@ -222,12 +164,12 @@
             border-radius: 4px;
             background-color: #fafafa;
         }
-        
         .drawing {
             max-width: 100%;
             height: auto;
         }
         
+        /* Footer */
         .footer {
             background-color: white;
             padding: 20px;
@@ -235,31 +177,26 @@
             border-top: 1px solid #ddd;
             text-align: center;
         }
-        
         .footer-links {
             margin-bottom: 15px;
         }
-        
         .footer-link {
             color: #3182ce;
             text-decoration: none;
             margin: 0 10px;
             font-size: 14px;
         }
-        
         .footer-info {
             color: #666;
             font-size: 12px;
             line-height: 1.6;
         }
-        
         .footer-logos {
             margin-top: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        
         .footer-logo {
             width: 40px;
             height: 40px;
@@ -275,25 +212,15 @@
     </style>
 </head>
 <body>
+    <!-- Header with CNIPA logo and title -->
     <header class="header">
         <div class="header-content">
-            <div class="logo">
-                <div class="logo-icon">
-                    <div class="logo-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="logo-p">P</div>
-                </div>
-                <div class="logo-text">CNIPA<br>国家知识产权局</div>
-            </div>
+            <img src="logo.png" alt="CNIPA Logo" class="cnipa-logo">
             <div class="title">中国专利公布公告</div>
         </div>
     </header>
     
+    <!-- Navigation bar -->
     <nav class="nav-bar">
         <div class="nav-content">
             <a href="#" class="nav-item">首页</a>
@@ -307,6 +234,7 @@
         </div>
     </nav>
     
+    <!-- Main content -->
     <div class="container">
         <div class="content-wrapper">
             <h1 class="patent-title">一种可视化直肠活检装置</h1>
@@ -339,15 +267,15 @@
                 </div>
                 <div class="info-row">
                     <div class="info-label">地址：</div>
-                    <div class="info-value">150000黑龙江省哈尔滨市松北区哈尔滨大学城3号楼1单元202</div>
+                    <div class="info-value">哈尔滨市南岗区保健路157号</div>
                 </div>
                 <div class="info-row">
                     <div class="info-label">发明人：</div>
-                    <div class="info-value">姚震,蒋在群,孙忠博,王书宝,许艺钦,王云梦,郝瑞辉</div>
+                    <div class="info-value">姚霆;蒋在群;孙忠博;王书玉;许芝林;王云婷;郝增辉</div>
                 </div>
                 <div class="info-row">
                     <div class="info-label">分类号：</div>
-                    <div class="info-value">A61B10/06(2006.01)I;A61B10/04(2006.01)I;A61B18/12(2006.01)I;A61B18/14(2006.01)I;A61M31/00(2006.01)I;</div>
+                    <div class="info-value">A61B10/06(2006.01)I;A61B10/04(2006.01)I;A61B18/12(2006.01)I;A61B18/14(2006.01)I;A61M31/00(2006.01)I;A61B1/31(2006.01)I;A61B1/04(2006.01)I</div>
                 </div>
                 <div class="info-row">
                     <div class="info-label">专利代理机构：</div>
@@ -361,40 +289,69 @@
             
             <div class="abstract-section">
                 <h3 class="abstract-title">摘要：</h3>
-                <p class="abstract-text">本实用新型涉及医疗用品领域，公开了一种可视化直肠活检装置，所述装置包括套管，所述套管为塑料材质，所述套管内设置第一芯管、第二芯管，所述第一芯管内设置活检钳，所述第二芯管内设置可视化装置，所述套管套设于管道，本实用新型解决了现有技术中在连的全部下部时并直肠活检过程中无法实现下置监测的难题，所述套管内的可视化装置，本不仅提高质，本不能提高效果，本不满足的实际大及所述套管的直径，所述套管内设置第一芯管、第二芯管，所述第一芯管内设置活检钳，所述第二芯管内设置可视化装置，所述套管套设及线，本实用新型解决了现有技术中在连的全部下部时并直肠活检过程中无法实现下置监测的难题，本不仅提高质，本不能提高效果，本不满足的实际大小所述套管的问题。</p>
+                <p class="abstract-text">本实用新型涉及医疗用品领域，公开了一种可视化直肠活检装置，所述装置包括套管，所述套管为与外鞘连接，所述外鞘端口的直径大于所述套管的直径；所述套管内设置第一芯管、第二芯管，所述第一芯管内设置活检钳，所述第二芯管内设置可视化装置，所述套管套设刻度线。本实用新型解决了现有技术中传统的全麻下经口直肠活检过程中无法实现或全麻下腹腔镜下直肠活检取出术，手术时间较长、手术难度较大、手术风险较高的问题。</p>
             </div>
             
             <div class="drawing-section">
                 <h3 class="drawing-title">摘要附图</h3>
                 <div class="drawing-container">
-                    <svg width="400" height="300" viewBox="0 0 400 300" class="drawing">
-                        <!-- Technical drawing representation -->
-                        <g stroke="#333" stroke-width="1" fill="none">
-                            <!-- Main body -->
-                            <rect x="50" y="120" width="300" height="60" rx="30"/>
-                            <!-- Internal components -->
-                            <circle cx="100" cy="150" r="15"/>
-                            <circle cx="150" cy="150" r="15"/>
-                            <circle cx="200" cy="150" r="15"/>
-                            <circle cx="250" cy="150" r="15"/>
-                            <circle cx="300" cy="150" r="15"/>
-                            <!-- Extension -->
-                            <line x1="350" y1="150" x2="380" y2="150"/>
-                            <circle cx="380" cy="150" r="8"/>
-                            <!-- Labels -->
-                            <text x="100" y="200" text-anchor="middle" font-size="12" fill="#666">1</text>
-                            <text x="150" y="200" text-anchor="middle" font-size="12" fill="#666">2</text>
-                            <text x="200" y="200" text-anchor="middle" font-size="12" fill="#666">3</text>
-                            <text x="250" y="200" text-anchor="middle" font-size="12" fill="#666">4</text>
-                            <text x="300" y="200" text-anchor="middle" font-size="12" fill="#666">5</text>
-                            <text x="380" y="200" text-anchor="middle" font-size="12" fill="#666">6</text>
-                            <!-- Connection lines -->
-                            <line x1="100" y1="165" x2="100" y2="190" stroke-dasharray="2,2"/>
-                            <line x1="150" y1="165" x2="150" y2="190" stroke-dasharray="2,2"/>
-                            <line x1="200" y1="165" x2="200" y2="190" stroke-dasharray="2,2"/>
-                            <line x1="250" y1="165" x2="250" y2="190" stroke-dasharray="2,2"/>
-                            <line x1="300" y1="165" x2="300" y2="190" stroke-dasharray="2,2"/>
-                            <line x1="380" y1="158" x2="380" y2="190" stroke-dasharray="2,2"/>
+                    <svg width="600" height="200" viewBox="0 0 600 200" class="drawing">
+                        <!-- Technical drawing representation of the medical device -->
+                        <g stroke="#333" stroke-width="1.5" fill="none">
+                            <!-- Main tube body -->
+                            <line x1="50" y1="90" x2="500" y2="90" stroke-width="2"/>
+                            <line x1="50" y1="110" x2="500" y2="110" stroke-width="2"/>
+                            <!-- Inner tube components -->
+                            <line x1="60" y1="95" x2="490" y2="95" stroke-width="1"/>
+                            <line x1="60" y1="105" x2="490" y2="105" stroke-width="1"/>
+                            <!-- End connection -->
+                            <line x1="50" y1="90" x2="50" y2="110" stroke-width="2"/>
+                            <!-- Device end -->
+                            <line x1="500" y1="90" x2="520" y2="85" stroke-width="2"/>
+                            <line x1="500" y1="110" x2="520" y2="115" stroke-width="2"/>
+                            <line x1="520" y1="85" x2="540" y2="85" stroke-width="2"/>
+                            <line x1="520" y1="115" x2="540" y2="115" stroke-width="2"/>
+                            <line x1="540" y1="85" x2="540" y2="115" stroke-width="2"/>
+                            <!-- Visualization component -->
+                            <circle cx="520" cy="75" r="5" stroke-width="1"/>
+                            <line x1="520" y1="70" x2="520" y2="85" stroke-width="1"/>
+                            <!-- Biopsy tool -->
+                            <line x1="530" y1="90" x2="550" y2="90" stroke-width="1.5"/>
+                            <line x1="530" y1="110" x2="550" y2="110" stroke-width="1.5"/>
+                            <line x1="550" y1="90" x2="550" y2="110" stroke-width="1.5"/>
+                            <!-- Scale markings -->
+                            <g stroke-width="0.5">
+                                <line x1="100" y1="85" x2="100" y2="115"/>
+                                <line x1="150" y1="85" x2="150" y2="115"/>
+                                <line x1="200" y1="85" x2="200" y2="115"/>
+                                <line x1="250" y1="85" x2="250" y2="115"/>
+                                <line x1="300" y1="85" x2="300" y2="115"/>
+                                <line x1="350" y1="85" x2="350" y2="115"/>
+                                <line x1="400" y1="85" x2="400" y2="115"/>
+                                <line x1="450" y1="85" x2="450" y2="115"/>
+                            </g>
+                            <!-- Component labels -->
+                            <text x="100" y="135" text-anchor="middle" font-size="12" fill="#666">1</text>
+                            <text x="200" y="135" text-anchor="middle" font-size="12" fill="#666">2</text>
+                            <text x="300" y="135" text-anchor="middle" font-size="12" fill="#666">3</text>
+                            <text x="400" y="135" text-anchor="middle" font-size="12" fill="#666">4</text>
+                            <text x="520" y="135" text-anchor="middle" font-size="12" fill="#666">5</text>
+                            <text x="520" y="60" text-anchor="middle" font-size="12" fill="#666">6</text>
+                            <text x="540" y="135" text-anchor="middle" font-size="12" fill="#666">7</text>
+                            <text x="550" y="75" text-anchor="middle" font-size="12" fill="#666">8</text>
+                            <text x="75" y="135" text-anchor="middle" font-size="12" fill="#666">9</text>
+                            <!-- Leader lines -->
+                            <g stroke-dasharray="1,1" stroke-width="0.5">
+                                <line x1="100" y1="115" x2="100" y2="125"/>
+                                <line x1="200" y1="115" x2="200" y2="125"/>
+                                <line x1="300" y1="115" x2="300" y2="125"/>
+                                <line x1="400" y1="115" x2="400" y2="125"/>
+                                <line x1="520" y1="115" x2="520" y2="125"/>
+                                <line x1="520" y1="70" x2="520" y2="55"/>
+                                <line x1="540" y1="115" x2="540" y2="125"/>
+                                <line x1="550" y1="90" x2="565" y2="75"/>
+                                <line x1="75" y1="100" x2="75" y2="125"/>
+                            </g>
                         </g>
                     </svg>
                 </div>
@@ -402,6 +359,7 @@
         </div>
     </div>
     
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">
             <a href="#" class="footer-link">版权声明</a>
